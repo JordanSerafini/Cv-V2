@@ -55,7 +55,6 @@ function Skill() {
                 <p>mocha/chai</p>
             </div>
 
-            <div className="Skill-Container-Title">Autres:</div>
         </div>
     </div>
   )
