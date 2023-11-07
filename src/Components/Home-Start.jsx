@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import Background from '../assets/background.jpeg';
 
 function HomeStart() {
-  const fullText = 'JE SUIS JORDAN SERAFINI, DÉVELOPPEUR WEB front-end et back-end.';
+  const fullText = 'JE SUIS JORDAN SERAFINI, DÉVELOPPEUR WEB';
   const [textToShow, setTextToShow] = useState('');
   const [cursorVisible, setCursorVisible] = useState(true);
   const [typing, setTyping] = useState(true);
@@ -52,14 +52,28 @@ function HomeStart() {
 
   return (
     <div className="Home-Start">
+      <section className="sticky">
+        <div className="bubbles">
+        <div className="bubble"></div>
+        <div className="bubble"></div>
+        <div className="bubble"></div>
+        <div className="bubble"></div>
+        <div className="bubble"></div>
+        <div className="bubble"></div>
+        <div className="bubble"></div>
+        <div className="bubble"></div>
+        <div className="bubble"></div>
+        <div className="bubble"></div>
+        </div>
+      </section>
       <img className="Home-Pic" src={Background} alt="Jordan Serafini" />
       <div className='Presentation-Container'>
-        <h3>BONJOUR</h3>
+        <h3 className='Bonjour'>BONJOUR ,</h3>
         <div className="Presentation-Text">
           <span className="Text-to-Show">{textToShow}</span>
           <span className={`Cursor ${cursorVisible ? 'Cursor-active' : ''}`}>|</span>
         </div>
-        <p>Blablabla</p>
+        <p className='Presentation-detail'> Développeur fullstack front-end et back-end.</p>
       </div>
     </div>
   );
