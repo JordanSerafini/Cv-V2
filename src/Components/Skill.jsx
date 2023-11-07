@@ -16,8 +16,10 @@ import mochaLogo from "../assets/mochaLogo.png";
 function Skill() {
   return (
     <div className='Skill'>
-        <div className='Skill-List-Container'>
-            <div className="Skill-Container">Front-end:</div>
+        <h2 className="Skill-Title">Compétences:</h2>
+        <div className='Skill-List-Container'> 
+          <div className="Skill-List-Front"></div>
+            <div className="Skill-Container-Title">Front-end:</div>
             <div className="Skill-Logo-Container">
                 <img src={jsLogo} alt="" />
                 <p>Javascript</p>
@@ -35,7 +37,7 @@ function Skill() {
                 <p>redux</p>
             </div>
             
-            <div className="Skill-Container">Back-end:</div>
+            <div className="Skill-Container-Title">Back-end:</div>
             <div className="Skill-Logo-Container">
                 <img src={nodeLogo} alt="" />
                 <p>Node JS</p>
@@ -53,7 +55,7 @@ function Skill() {
                 <p>mocha/chai</p>
             </div>
 
-            <div className="Skill-Container">Autres:</div>
+            <div className="Skill-Container-Title">Autres:</div>
         </div>
     </div>
   )
