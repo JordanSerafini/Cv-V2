@@ -69,11 +69,13 @@ function HomeStart() {
       <img className="Home-Pic" src={Background} alt="Jordan Serafini" />
       <div className='Presentation-Container'>
         <h3 className='Bonjour'>BONJOUR ,</h3>
+        <div className="Presentation-Text-Container">
         <div className="Presentation-Text">
           <span className="Text-to-Show">{textToShow}</span>
           <span className={`Cursor ${cursorVisible ? 'Cursor-active' : ''}`}>|</span>
         </div>
-        <p className='Presentation-detail'> Développeur fullstack front-end et back-end.</p>
+        <p className='Presentation-detail'> Développeur junior front-end et back-end.</p>
+      </div>
       </div>
     </div>
   );

@@ -35,17 +35,27 @@ body {
   min-width: 20rem; /* Ou fixez une largeur minimale */
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 2rem;
 
 }
 
 .Bonjour {
   font-style: bold;
   font-size: 1.2rem;
+  text-indent: 0rem;
+
 }
 
 .Presentation-detail {
   font-style: italic;
+  text-indent: 0rem;
+}
+
+.Presentation-Text-Container {
+  gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+
 }
 /* ---------------------------------- Page: HOME START ---------------------------------- */
 
