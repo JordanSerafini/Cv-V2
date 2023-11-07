@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import Background from '../Assets/background.jpeg';
+import Background from '../assets/background.jpeg';
 
 function HomeStart() {
   const fullText = 'JE SUIS JORDAN SERAFINI, DÉVELOPPEUR WEB front-end et back-end.';
