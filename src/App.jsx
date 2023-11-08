@@ -5,7 +5,7 @@ import Navbar from './Components/Navbar.jsx';
 import Competences from './Components/compétences.jsx';
 import Skill from './Components/Skill.jsx';
 import Portfoglio from './Components/Portfoglio.jsx';
-import upLogo from './Assets/upLogo.png';
+import upLogo from './assets/upLogo.png';
 
 import './App.css';
 
