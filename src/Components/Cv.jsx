@@ -1,6 +1,5 @@
 import React from 'react';
-import downloadLogo from '../assets/downloadLogo.jpeg'; // Notez que cette importation n'est pas utilisée
-import DlLogo from '../assets/DlLogo.png';
+import DlLogo from '../assets/dlLogo.png';
 import CvPDF from '../../public/cv-alternance.pdf'; // Assurez-vous que le chemin d'accès au fichier est correct
 
 function Cv() {
