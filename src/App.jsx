@@ -1,22 +1,24 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from "react";
 
-import HomeStart from './Components/Home-Start.jsx';
-import Navbar from './Components/Navbar.jsx';
-import Competences from './Components/compétences.jsx';
-import Skill from './Components/Skill.jsx';
-import Portfoglio from './Components/Portfoglio.jsx';
-import upLogo from './assets/upLogo.png';
-import EmailForm from './Components/Email.jsx';
-import Cv from './Components/Cv.jsx';
+import HomeStart from "./Components/Home-Start.jsx";
+import Navbar from "./Components/Navbar.jsx";
+import Competences from "./Components/compétences.jsx";
+import Skill from "./Components/Skill.jsx";
+import Portfoglio from "./Components/Portfoglio.jsx";
+import upLogo from "./assets/upLogo.png";
+import EmailForm from "./Components/Email.jsx";
+import Cv from "./Components/Cv.jsx";
 
-import './App.css';
-
+import "./App.css";
 
 const useIntersectionObserver = (ref, callback, options = {}) => {
   useEffect(() => {
-    const observer = new IntersectionObserver(([entry]) => {
-      callback(entry.isIntersecting);
-    }, { ...options, threshold: [0.25], rootMargin: "-100px 0px" });
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        callback(entry.isIntersecting);
+      },
+      { ...options, threshold: [0.25], rootMargin: "-100px 0px" }
+    );
 
     const currentRef = ref.current;
     if (currentRef) {
@@ -30,9 +32,6 @@ const useIntersectionObserver = (ref, callback, options = {}) => {
     };
   }, [ref, options, callback]);
 };
-
-
-
 
 function App() {
   const [showScroll, setShowScroll] = useState(false);
@@ -54,11 +53,9 @@ function App() {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth',
+      behavior: "smooth",
     });
   };
-
-
 
   // Utilisation de useIntersectionObserver pour chaque section
   useIntersectionObserver(competencesRef, (isVisible) => {
@@ -78,9 +75,9 @@ function App() {
   });
 
   useEffect(() => {
-    window.addEventListener('scroll', checkScrollTop);
+    window.addEventListener("scroll", checkScrollTop);
     return () => {
-      window.removeEventListener('scroll', checkScrollTop);
+      window.removeEventListener("scroll", checkScrollTop);
     };
   }, [showScroll]);
 
@@ -88,22 +85,33 @@ function App() {
     <>
       <HomeStart />
       <Navbar />
-      <div ref={competencesRef} style={{ opacity: 0, transition: 'opacity 1s ease-out' }}>
-  <Competences />
-</div>
-<div ref={skillRef} style={{ opacity: 0, transition: 'opacity 1s ease-out' }}>
-  <Skill />
-</div>
-<div ref={portfoglioRef} style={{ opacity: 0, transition: 'opacity 1s ease-out' }}>
-  <Portfoglio />
-</div>
-<div ref={emailFormRef} style={{ opacity: 0, transition: 'opacity 1s ease-out' }}>
-  <EmailForm />
-</div>
+      <div
+        ref={competencesRef}
+        style={{ opacity: 0, transition: "opacity 1s ease-out" }}
+      >
+        <Competences />
+      </div>
+      <div
+        ref={skillRef}
+        style={{ opacity: 0, transition: "opacity 1s ease-out" }}
+      >
+        <Skill />
+      </div>
+      <div
+        ref={portfoglioRef}
+        style={{ opacity: 0, transition: "opacity 1s ease-out" }}
+      >
+        <Portfoglio />
+      </div>
+      <div
+        ref={emailFormRef}
+        style={{ opacity: 0, transition: "opacity 1s ease-out" }}
+      >
+        <EmailForm />
+      </div>
 
-
-      <div className={`upBtn ${showScroll ? 'visible' : ''}`} onClick={scrollToTop}>
-        <img src={upLogo} alt="Retour en haut" />
+      <div className={`upBtn ${showScroll ? "visible" : ""}`}>
+        <img onClick={scrollToTop} src={upLogo} alt="Retour en haut" />
         <Cv />
       </div>
     </>
