@@ -1,15 +1,18 @@
-// EmailForm.jsx
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
-const EmailForm = ({ title, content }) => {
+const EmailForm = () => {
   const [email, setEmail] = useState({
-    subject: title,
-    text: content
+    subject: '',
+    text: ''
   });
   const [message, setMessage] = useState('');
+  const [error, setError] = useState('');
 
   const sendEmail = async (e) => {
     e.preventDefault();
+    setMessage('');
+    setError('');
+
     try {
       const response = await fetch('/.netlify/functions/sendEmail', {
         method: 'POST',
@@ -18,28 +21,42 @@ const EmailForm = ({ title, content }) => {
           'Content-Type': 'application/json'
         }
       });
-      if (!response.ok) {
-        throw new Error(`Error: ${response.statusText}`);
-      }
+
       const responseBody = await response.json();
-      setMessage('Email sent successfully');
+
+      if (!response.ok) {
+        throw new Error(responseBody.error || 'Failed to send email.');
+      }
+
+      setMessage(responseBody.message);
     } catch (error) {
       console.error('Error sending email:', error);
-      setMessage('Failed to send email');
+      setError(error.message || 'Failed to send email. Please try again later.');
     }
   };
 
   return (
     <div>
       <form onSubmit={sendEmail}>
-        <h2>{title}</h2>
-        <textarea
-          value={email.text}
-          onChange={(e) => setEmail({ ...email, text: e.target.value })}
-        />
+        <label>
+          Subject:
+          <input 
+            type="text" 
+            value={email.subject} 
+            onChange={(e) => setEmail({ ...email, subject: e.target.value })}
+          />
+        </label>
+        <label>
+          Message:
+          <textarea
+            value={email.text}
+            onChange={(e) => setEmail({ ...email, text: e.target.value })}
+          />
+        </label>
         <button type="submit">Send Email</button>
       </form>
       {message && <p>{message}</p>}
+      {error && <p className="error">{error}</p>}
     </div>
   );
 };

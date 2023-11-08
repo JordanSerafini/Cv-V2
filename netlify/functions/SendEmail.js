@@ -1,15 +1,22 @@
 import sendgrid from '@sendgrid/mail';
 
-sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
+const sendgridApiKey = process.env.SENDGRID_API_KEY;
 
-// La fonction pour configurer les headers CORS
+if (!sendgridApiKey) {
+  console.error('SendGrid API key is not configured.');
+  throw new Error('SendGrid API key is not configured');
+}
+
+sendgrid.setApiKey(sendgridApiKey);
+
+// Fonction pour configurer les headers CORS
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*', // Vous devriez restreindre cela à votre domaine en production
   'Access-Control-Allow-Headers': 'Content-Type',
   'Access-Control-Allow-Methods': 'POST, OPTIONS'
 };
 
-exports.handler = async (event) => {
+const handler = async (event) => {
   // Pré-traite les requêtes OPTIONS pour CORS
   if (event.httpMethod === 'OPTIONS') {
     return {
@@ -44,7 +51,7 @@ exports.handler = async (event) => {
       body: JSON.stringify({ message: 'Email sent successfully' }),
     };
   } catch (error) {
-    console.error(error);
+    console.error('Error sending email:', error);
     return {
       statusCode: error.code || 500,
       headers: corsHeaders,
@@ -52,3 +59,5 @@ exports.handler = async (event) => {
     };
   }
 };
+
+export { handler };
