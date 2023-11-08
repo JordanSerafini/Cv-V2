@@ -37,8 +37,8 @@ const handler = async (event) => {
   const message = {
     to: 'jordanserafini.74@gmail.com', 
     from: 'immoprosoclock@gmail.com', 
-    subject: data.subject,
-    text: data.text
+    subject: `${data.subject}, recu depuis: ${data.email}` ,
+    text:  data.text
   };
 
   try {

@@ -2,9 +2,11 @@ import { useState, useEffect } from 'react';
 
 const EmailForm = () => {
   const [email, setEmail] = useState({
+    email: '', 
     subject: '',
     text: ''
   });
+  
   const [message, setMessage] = useState('');
   const [error, setError] = useState('');
 

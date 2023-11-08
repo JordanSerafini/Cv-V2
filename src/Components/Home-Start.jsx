@@ -71,7 +71,7 @@ function HomeStart() {
           <span className="Text-to-Show">{textToShow}</span>
           <span className={`Cursor ${cursorVisible ? 'Cursor-active' : ''}`}>|</span>
         </div>
-        <p className='Presentation-detail'> Développeur junior front-end et back-end.</p>
+        <p className='Presentation-detail'>Front-end et Back-end.</p>
       </div>
       </div>
     </div>
