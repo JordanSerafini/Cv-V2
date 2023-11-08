@@ -10,6 +10,8 @@ body {
   font-style: italic;
 }
 
+
+
 /* ---------------------------------- Page: HOME-START ---------------------------------- */
 
 .Home-Start {
@@ -31,7 +33,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  min-width: 20rem; /* Ou fixez une largeur minimale */
+  min-width: 20rem; 
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -62,9 +64,8 @@ body {
 .Home-Start img {
   height: 917px;
   width: 100%;
-  object-fit: cover; /* Cela garantit que l'image couvre l'espace disponible sans être déformée */
-  position: absolute; /* Positionne l'image absolument par rapport à son parent positionné relativement */
-  top: 0;
+  object-fit: cover; 
+  position: absolute; 
   left: 0;
 }
 
@@ -101,10 +102,10 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  white-space: nowrap; /* Assurez-vous que le texte caché ne passe pas à la ligne */
+  white-space: nowrap; 
 }
 
-/* Animation pour faire clignoter le curseur */
+
 @keyframes blink-cursor {
   from {
     opacity: 1;
@@ -181,10 +182,10 @@ body {
 
 .Bio-Title {
   
-  position: relative; /* Position relative pour le conteneur parent */
-  font-family: 'Votre police de caractères', sans-serif; /* Remplacez par votre police de caractères */
-  color: #666; /* Couleur de police standard */
-  text-align: center; /* Centrer le texte */
+  position: relative; 
+  font-family: 'Votre police de caractères', sans-serif; 
+  color: #666; 
+  text-align: center; 
   margin-top: 200px;
   display: flex;
   align-items: center;
@@ -194,21 +195,21 @@ body {
 }
 
 .BackgroundTitle {
-  font-size: 7rem; /* Taille de la police très grande pour l'arrière-plan */
+  font-size: 7rem; 
   font-weight: bold;
-  color: rgba(0, 0, 0, 0.1); /* Couleur de police claire pour l'effet d'arrière-plan */
-  position: absolute; /* Position absolue pour superposer */
-  left: 50%; /* Centrer par rapport au parent */
-  top: 50%; /* Centrer verticalement */
-  transform: translate(-50%, -50%); /* Ajuster précisément le centre */
-  margin: 0; /* Supprimer les marges par défaut */
-  z-index: 1; /* z-index bas pour l'arrière-plan */
+  color: rgba(0, 0, 0, 0.1); 
+  position: absolute;
+  left: 50%;
+  top: 50%; 
+  transform: translate(-50%, -50%); 
+  margin: 0;
+  z-index: 1; 
 }
 
 .Bio-Rep {
-  z-index: 2; /* z-index plus élevé pour rester sur le texte d'arrière-plan */
-  font-size: 2rem; /* Taille de la police pour le texte de premier plan */
-  color: #333; /* Couleur de police plus foncée pour le texte de premier plan */
+  z-index: 2; 
+  font-size: 2rem; 
+  color: #333; 
 
 }
 
@@ -238,15 +239,15 @@ body {
 }
 
 .Portfolio-BackText {
-  font-size: 7rem; /* Taille de la police très grande pour l'arrière-plan */
+  font-size: 7rem; 
   font-weight: bold;
-  color: rgba(0, 0, 0, 0.1); /* Couleur de police claire pour l'effet d'arrière-plan */
-  position: absolute; /* Position absolue pour superposer */
-  left: 50%; /* Centrer par rapport au parent */
-  top: 14%; /* Centrer verticalement */
-  transform: translate(-50%, -50%); /* Ajuster précisément le centre */
-  margin: 0; /* Supprimer les marges par défaut */
-  z-index: 1; /* z-index bas pour l'arrière-plan */
+  color: rgba(0, 0, 0, 0.1); 
+  position: absolute;
+  left: 50%;
+  top: 14%; 
+  transform: translate(-50%, -50%); 
+  margin: 0; 
+  z-index: 1; 
 }
 
 
@@ -284,8 +285,7 @@ body {
 }
 
 .Portfolio-Project {
-  box-shadow: 0 6px 16px 0 rgba(0,0,0,0.3); /* Ombre plus prononcée au survol */
-  background-color: white;
+  box-shadow: 0 6px 16px 0 rgba(0,0,0,0.3); 
   border: solid rgba(0, 0, 0, 0.212) 1px;
   height: 200px;
   width: 500px;
@@ -296,18 +296,19 @@ body {
   flex-direction: column;
   gap: 1rem;
   border-radius: 2.5rem;
-  transition: transform 0.5s, box-shadow 1s; /* Transition fluide */
+  transition: transform 0.5s, box-shadow 1s;
   font-size: 18px;
-  position: relative; /* Position relative pour positionner les éléments enfants absolument */
-  overflow: hidden; /* Assurez-vous que rien ne dépasse de la bulle */
+  position: relative; 
+  overflow: hidden;
   cursor: pointer;
 
 }
 
 
+
 .Portfolio-Project:hover {
   transform: scale(1.05);
-  box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.473); /* Ombre plus prononcée au survol */
+  box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.473); 
 }
 
 
@@ -320,8 +321,8 @@ body {
   gap: 1.5rem;
 
 
-  z-index: 2; /* S'assurer que le contenu est au-dessus du texte de survol */
-  transition: opacity 0.3s; /* Transition pour l'effet d'apparition/disparition */
+  z-index: 2; 
+  transition: opacity 0.3s;
 }
 
 .Project-Content img {
@@ -330,19 +331,19 @@ body {
 
 .Project-Hover {
   padding: 0.5rem;
-  position: absolute; /* Position absolue pour le superposer */
+  position: absolute; 
   top: 0;
   left: 0;
-  width: 100%; /* Prend toute la largeur de .Portfolio-Project */
-  height: 100%; /* Prend toute la hauteur de .Portfolio-Project */
-  background-color: rgba(0, 0, 0, 0.7); /* Fond semi-transparent noir */
-  color: white; /* Texte blanc pour contraste */
-  display: flex; /* Utiliser flexbox pour centrer le texte */
+  width: 100%;
+  height: 100%; 
+  background-color: rgba(0, 0, 0, 0.7); 
+  color: white;
+  display: flex; 
   justify-content: center;
   align-items: center;
-  opacity: 0; /* Commencez transparent pour qu'il ne soit pas visible */
-  transition: opacity 0.3s; /* Transition pour l'effet d'apparition/disparition */
-  z-index: 1; /* Sous le contenu pour que le texte ne soit pas cliquable */
+  opacity: 0; 
+  transition: opacity 0.3s; 
+  z-index: 1; 
 }
 
 .Portfolio-Project:hover .Project-Content {
@@ -387,12 +388,12 @@ body {
   width: 50px;
   border: solid rgba(0, 0, 0, 0.644) 1px;
   border-radius: 50%;
-  transition: transform 1s, box-shadow 1s; /* Transition fluide */
-  box-shadow: 5px 5px 5px -3px rgba(0, 0, 0, 0.5); /* Ombre constante sur le côté droit */
+  transition: transform 1s, box-shadow 1s; 
+  box-shadow: 5px 5px 5px -3px rgba(0, 0, 0, 0.5); 
 }
 
 .Skill-Logo-Container img:hover {
-  transform: rotate(360deg); /* Rotation de 360 degrés au survol */
+  transform: rotate(360deg);
 }
 
 
@@ -412,7 +413,96 @@ body {
   font-size: 1.3rem;
 }
 
-/* ---------------------------------- Page: HEADER ---------------------------------- */
+/* ---------------------------------- Page: CONTACT ---------------------------------- */
+
+
+.Contact {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.Contact-Title-Container {
+  height: 450px;
+  width: auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.Contact-Title{
+  z-index: 2; 
+  font-size: 2.5rem; 
+
+  color: #333; 
+
+
+}
+
+.Contact-Title-Background {
+  font-size: 7rem; 
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.1); 
+  position: absolute; 
+  left: 50%; 
+  top: 48%;
+  transform: translate(-50%, -50%); 
+  margin: 0; 
+  z-index: 1; 
+  width: 80rem;
+
+}
+
+.Contact-Container {
+  padding: 5rem;
+
+  background-color: #F5F5F5 ;
+  width: 83.25%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.Contact-Container input {
+  height: 30px;
+  border: solid black 1px;
+}
+
+.Contact-Container textarea {
+  padding: 1rem;
+  border-radius: 1.5rem;
+  height: 300px;
+  width: 750px;
+}
+
+
+
+.Contact-Entete {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 1.5rem;
+}
+
+.Form-Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 3rem;
+  
+}
+
+
 /* ---------------------------------- Page: HEADER ---------------------------------- */
 /* ---------------------------------- Page: HEADER ---------------------------------- */
 /* ---------------------------------- Page: HEADER ---------------------------------- */
@@ -425,10 +515,10 @@ body {
 
 .upBtn {
   z-index: 5000;
-  position: fixed; /* Position fixe sur l'écran */
-  bottom: 20px;    /* 20px du bas de l'écran */
-  right: 20px;     /* 20px de la droite de l'écran */
-  cursor: pointer; /* Changement du curseur au survol */
+  position: fixed; 
+  bottom: 20px;    
+  right: 20px;     
+  cursor: pointer; 
   opacity: 0;
   transition: opacity 0.3s ease-in-out
 }

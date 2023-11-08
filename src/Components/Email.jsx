@@ -36,16 +36,39 @@ const EmailForm = () => {
   };
 
   return (
-    <div>
-      <form onSubmit={sendEmail}>
+    <div className='Contact'>
+      <div className='Contact-Title-Container'>
+      <div className="Contact-Title">
+        Me contacter
+      </div>
+      <div className='Contact-Title-Background'>
+        Plus de renseignements ?
+      </div>
+      </div>
+      <div className="Contact-Container">
+ 
+      <form onSubmit={sendEmail} className='Form-Container'>
+        <div className="Contact-Entete">
+        <label className='Contact-Email-Container'>
+          Votre email:
+          <input  className='Contact-Email'
+            type="text" 
+            value={email.email} 
+            onChange={(e) => setEmail({ ...email, email: e.target.value })}
+          />
+        </label>
+
+
         <label>
-          Subject:
+          Sujet:
           <input 
             type="text" 
             value={email.subject} 
             onChange={(e) => setEmail({ ...email, subject: e.target.value })}
           />
         </label>
+        </div>
+
         <label>
           Message:
           <textarea
@@ -55,8 +78,8 @@ const EmailForm = () => {
         </label>
         <button type="submit">Send Email</button>
       </form>
-      {message && <p>{message}</p>}
-      {error && <p className="error">{error}</p>}
+      
+    </div>
     </div>
   );
 };
