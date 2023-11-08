@@ -1,6 +1,6 @@
 import React from 'react';
 import DlLogo from '../assets/dlLogo.png';
-import CvPDF from '../../public/cv-alternance.pdf'; // Assurez-vous que le chemin d'accès au fichier est correct
+import CvPDF from '/cv-alternance.pdf'; // Assurez-vous que le chemin d'accès au fichier est correct
 
 function Cv() {
 
@@ -16,6 +16,7 @@ function Cv() {
 
     return (
         <div className='Download-CV' onClick={downloadCv}>
+            
             <img src={DlLogo} alt="Download CV" />
             <p>CV</p>
         </div>
