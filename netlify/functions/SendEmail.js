@@ -50,7 +50,6 @@ const handler = async (event) => {
     return {
       statusCode: 200,
       headers: corsHeaders,
-      body: JSON.stringify({ message: 'Email sent successfully' }),
     };
   } catch (error) {
     console.error('Error sending email:', error);
