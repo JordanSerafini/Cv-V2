@@ -11,7 +11,7 @@ const EmailForm = ({ title, content }) => {
   const sendEmail = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('/.netlify/functions/sendEmail', {
+      const response = await fetch('https://jordan-serafini.com/.netlify/functions/SendEmail', {
         method: 'POST',
         body: JSON.stringify(email),
         headers: {
