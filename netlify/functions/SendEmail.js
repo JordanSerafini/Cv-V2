@@ -9,15 +9,13 @@ if (!sendgridApiKey) {
 
 sendgrid.setApiKey(sendgridApiKey);
 
-// Fonction pour configurer les headers CORS
 const corsHeaders = {
-  'Access-Control-Allow-Origin': '*', // Vous devriez restreindre cela à votre domaine en production
+  'Access-Control-Allow-Origin': '*', 
   'Access-Control-Allow-Headers': 'Content-Type',
   'Access-Control-Allow-Methods': 'POST, OPTIONS'
 };
 
 const handler = async (event) => {
-  // Pré-traite les requêtes OPTIONS pour CORS
   if (event.httpMethod === 'OPTIONS') {
     return {
       statusCode: 200,
@@ -37,15 +35,14 @@ const handler = async (event) => {
   const data = JSON.parse(event.body);
 
   const message = {
-    to: 'jordanserafini.74@gmail.com', // Destinataire fixe pour l'exemple
-    from: 'immoprosoclock@gmail.com', // Doit être un e-mail vérifié dans SendGrid
+    to: 'jordanserafini.74@gmail.com', 
+    from: 'immoprosoclock@gmail.com', 
     subject: data.subject,
     text: data.text
   };
 
   try {
     await sendgrid.send(message);
-    // Enregistrez un message dans la console
     console.log('Email sent successfully');
     return {
       statusCode: 200,
@@ -53,7 +50,6 @@ const handler = async (event) => {
     };
   } catch (error) {
     console.error('Error sending email:', error);
-    // Enregistrez un message d'erreur dans la console
     console.error('Email sending failed:', error);
     return {
       statusCode: error.code || 500,

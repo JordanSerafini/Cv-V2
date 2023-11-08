@@ -14,7 +14,7 @@ function App() {
   const [showScroll, setShowScroll] = useState(false);
 
   const checkScrollTop = () => {
-    if (!showScroll && window.pageYOffset > 400) { // par exemple après 400px de défilement
+    if (!showScroll && window.pageYOffset > 400) { 
       setShowScroll(true);
     } else if (showScroll && window.pageYOffset <= 400) {
       setShowScroll(false);
@@ -24,7 +24,7 @@ function App() {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth', // pour un effet de défilement doux
+      behavior: 'smooth', 
     });
   };
 

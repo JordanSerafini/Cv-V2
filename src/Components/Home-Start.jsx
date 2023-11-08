@@ -21,34 +21,31 @@ function HomeStart() {
           setTextToShow(fullText.slice(0, index + 1));
           index++;
         } else {
-          // Une fois que le texte complet est affiché, attendez 5 secondes avant de commencer à effacer
           typingTimeout = setTimeout(() => {
-            setTyping(false); // Commencer l'effacement
-          }, 5000); // Attendre 5 secondes
+            setTyping(false); 
+          }, 5000); 
         }
       } else {
         if (index > 0) {
           setTextToShow(fullText.slice(0, index - 1));
           index--;
         } else {
-          // Une fois le texte complètement effacé, attendez 5 secondes avant de recommencer à écrire
           typingTimeout = setTimeout(() => {
-            setTyping(true); // Commencer à écrire
-          }, 5000); // Attendre 5 secondes
+            setTyping(true); 
+          }, 5000); 
         }
       }
     };
 
     const typeInterval = setInterval(() => {
       typeOrErase();
-    }, 120); // Vitesse d'écriture/effacement
-
+    }, 120); 
     return () => {
       clearInterval(cursorInterval);
       clearInterval(typeInterval);
       clearTimeout(typingTimeout);
     };
-  }, [typing]); // Dépendance de l'effet sur l'état de 'typing'
+  }, [typing]); 
 
   return (
     <div className="Home-Start">
