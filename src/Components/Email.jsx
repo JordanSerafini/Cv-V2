@@ -76,7 +76,7 @@ const EmailForm = () => {
             onChange={(e) => setEmail({ ...email, text: e.target.value })}
           />
         </label>
-        <button type="submit">Send Email</button>
+        <button type="submit">Envoyer email</button>
       </form>
       
     </div>
