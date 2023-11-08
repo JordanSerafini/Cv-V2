@@ -7,6 +7,7 @@ import Skill from './Components/Skill.jsx';
 import Portfoglio from './Components/Portfoglio.jsx';
 import upLogo from './assets/upLogo.png';
 import EmailForm from './Components/Email.jsx';
+import Cv from './Components/Cv.jsx';
 
 import './App.css';
 
@@ -44,8 +45,9 @@ function App() {
       <Portfoglio />
       <EmailForm />
 
-      <div className={`upBtn ${showScroll ? 'visible' : ''}`} onClick={scrollToTop}>
-      <img src={upLogo} alt="Retour en haut" />
+      <div className={`upBtn ${showScroll ? 'visible' : ''}`} >
+      <img onClick={scrollToTop} src={upLogo} alt="Retour en haut" />
+      < Cv showScroll={showScroll}/>
     </div>
       
     </>
