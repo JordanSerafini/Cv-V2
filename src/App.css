@@ -301,6 +301,8 @@ body {
   position: relative; 
   overflow: hidden;
   cursor: pointer;
+  background-color: white;
+
 
 }
 
@@ -319,7 +321,6 @@ body {
   align-items: center;
   flex-direction: column;
   gap: 1.5rem;
-
 
   z-index: 2; 
   transition: opacity 0.3s;
