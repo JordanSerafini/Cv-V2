@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 const EmailForm = () => {
   const [email, setEmail] = useState({
@@ -14,7 +14,7 @@ const EmailForm = () => {
     setError('');
 
     try {
-      const response = await fetch('https://jordan-serafini.com/.netlify/functions/sendEmail', {
+      const response = await fetch('/.netlify/functions/SendEmail', {
         method: 'POST',
         body: JSON.stringify(email),
         headers: {
