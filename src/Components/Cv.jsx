@@ -35,7 +35,7 @@ function Cv() {
     return (
         <>
             <div className='Download-CV' onClick={handleDownloadClick}>
-                <img src={DlLogo} alt="Download CV" />
+                <img className='Download-CV-Logo' src={DlLogo} alt="Download CV" />
                 <p>CV</p>
             </div>
             

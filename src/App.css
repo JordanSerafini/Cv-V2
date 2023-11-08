@@ -517,14 +517,16 @@ body {
   gap: 0.2rem;
   background-color: white;
   border: solid rgba(0, 0, 0, 0.226) 1px;
-  padding: 1rem;
+  padding: 0.8rem;
   border-radius: 3rem;
   transition: transform 0.5s;
   box-shadow: 0 6px 16px 0 rgba(0,0,0,0.3);
 }
 
-.Download-CV img {
+.Download-CV-Logo {
+  height: 45px;
 
+  
 }
 
 .Modal {
