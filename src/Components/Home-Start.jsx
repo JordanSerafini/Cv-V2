@@ -68,7 +68,7 @@ function HomeStart() {
       </section>
       <img className="Home-Pic" src={Background} alt="Jordan Serafini" />
       <div className='Presentation-Container'>
-        <h3 className='Bonjour'>BONJOUR ,</h3>
+        <h3 className='Bonjour'>BIENVENUE ,</h3>
         <div className="Presentation-Text-Container">
         <div className="Presentation-Text">
           <span className="Text-to-Show">{textToShow}</span>

@@ -31,12 +31,12 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: max-content; /* Cette propriété ajustera la largeur au contenu */
   min-width: 20rem; /* Ou fixez une largeur minimale */
   display: flex;
   flex-direction: column;
   gap: 2rem;
-
+  flex-wrap: wrap;
+  width: 950px;
 }
 
 .Bonjour {
@@ -57,7 +57,6 @@ body {
   flex-direction: column;
 
 }
-/* ---------------------------------- Page: HOME START ---------------------------------- */
 
 
 .Home-Start img {
@@ -244,7 +243,7 @@ body {
   color: rgba(0, 0, 0, 0.1); /* Couleur de police claire pour l'effet d'arrière-plan */
   position: absolute; /* Position absolue pour superposer */
   left: 50%; /* Centrer par rapport au parent */
-  top: 16%; /* Centrer verticalement */
+  top: 14%; /* Centrer verticalement */
   transform: translate(-50%, -50%); /* Ajuster précisément le centre */
   margin: 0; /* Supprimer les marges par défaut */
   z-index: 1; /* z-index bas pour l'arrière-plan */
@@ -287,7 +286,7 @@ body {
 .Portfolio-Project {
   box-shadow: 0 6px 16px 0 rgba(0,0,0,0.3); /* Ombre plus prononcée au survol */
   background-color: white;
-  border: solid black 1px;
+  border: solid rgba(0, 0, 0, 0.212) 1px;
   height: 200px;
   width: 500px;
   padding: 0.5rem;
@@ -299,14 +298,66 @@ body {
   border-radius: 2.5rem;
   transition: transform 0.5s, box-shadow 1s; /* Transition fluide */
   font-size: 18px;
+  position: relative; /* Position relative pour positionner les éléments enfants absolument */
+  overflow: hidden; /* Assurez-vous que rien ne dépasse de la bulle */
+  cursor: pointer;
+
 }
+
 
 .Portfolio-Project:hover {
   transform: scale(1.05);
   box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.473); /* Ombre plus prononcée au survol */
-
-
 }
+
+
+.Project-Content {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5rem;
+
+
+  z-index: 2; /* S'assurer que le contenu est au-dessus du texte de survol */
+  transition: opacity 0.3s; /* Transition pour l'effet d'apparition/disparition */
+}
+
+.Project-Content img {
+  width: 70px;
+}
+
+.Project-Hover {
+  padding: 0.5rem;
+  position: absolute; /* Position absolue pour le superposer */
+  top: 0;
+  left: 0;
+  width: 100%; /* Prend toute la largeur de .Portfolio-Project */
+  height: 100%; /* Prend toute la hauteur de .Portfolio-Project */
+  background-color: rgba(0, 0, 0, 0.7); /* Fond semi-transparent noir */
+  color: white; /* Texte blanc pour contraste */
+  display: flex; /* Utiliser flexbox pour centrer le texte */
+  justify-content: center;
+  align-items: center;
+  opacity: 0; /* Commencez transparent pour qu'il ne soit pas visible */
+  transition: opacity 0.3s; /* Transition pour l'effet d'apparition/disparition */
+  z-index: 1; /* Sous le contenu pour que le texte ne soit pas cliquable */
+}
+
+.Portfolio-Project:hover .Project-Content {
+  opacity: 0.3; /* Rendre le contenu moins visible lors du survol */
+}
+
+.Portfolio-Project:hover .Project-Hover {
+  opacity: 1; /* Rendre le texte de survol visible */
+}
+
+.Project-Title {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
 /* ---------------------------------- Page: Skill ---------------------------------- */
 .Skill {
   
@@ -370,6 +421,26 @@ body {
 /* ---------------------------------- Page: HEADER ---------------------------------- */
 /* ---------------------------------- Page: HEADER ---------------------------------- */
 
+
+
+.upBtn {
+  z-index: 5000;
+  position: fixed; /* Position fixe sur l'écran */
+  bottom: 20px;    /* 20px du bas de l'écran */
+  right: 20px;     /* 20px de la droite de l'écran */
+  cursor: pointer; /* Changement du curseur au survol */
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out
+}
+
+.upBtn img {
+width: 50px;
+}
+
+
+.upBtn.visible {
+  opacity: 1;
+}
 
 
 
