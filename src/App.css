@@ -229,41 +229,63 @@ body {
 /* ---------------------------------- Page: PORTFOGLIO ---------------------------------- */
 
 .Portfolio {
-  padding-top: 50px ;
+  padding-top: 70px ;
   background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  position: relative;
 }
 
+.Portfolio-BackText {
+  font-size: 7rem; /* Taille de la police très grande pour l'arrière-plan */
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.1); /* Couleur de police claire pour l'effet d'arrière-plan */
+  position: absolute; /* Position absolue pour superposer */
+  left: 50%; /* Centrer par rapport au parent */
+  top: 16%; /* Centrer verticalement */
+  transform: translate(-50%, -50%); /* Ajuster précisément le centre */
+  margin: 0; /* Supprimer les marges par défaut */
+  z-index: 1; /* z-index bas pour l'arrière-plan */
+}
+
+
+.Portfolio-Rep {
+  padding: 2rem;
+  font-size: 40px;
+}
+
+
 .Portfolio-Container {
+  z-index: 2;
+  position: relative;
   padding: 4rem;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 2rem;
+  gap: 5rem;
   background-color: #F5F5F5 ;
   width: 85%;
   height: auto;
 
 }
 
-.Porfolio-Project-Container {
+.Portfolio-Project-Container {
   width: 90%;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   flex-direction: row;
+  flex-wrap: wrap;
+  gap: 5rem;
   
 
-  gap: 2rem;
 }
 
-.Porfolio-Project {
+.Portfolio-Project {
   box-shadow: 0 6px 16px 0 rgba(0,0,0,0.3); /* Ombre plus prononcée au survol */
-
   background-color: white;
   border: solid black 1px;
   height: 200px;
@@ -275,9 +297,11 @@ body {
   flex-direction: column;
   gap: 1rem;
   border-radius: 2.5rem;
+  transition: transform 0.5s, box-shadow 1s; /* Transition fluide */
+  font-size: 18px;
 }
 
-.Porfolio-Project:hover {
+.Portfolio-Project:hover {
   transform: scale(1.05);
   box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.473); /* Ombre plus prononcée au survol */
 
