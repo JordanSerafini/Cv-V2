@@ -1,6 +1,6 @@
-import immoLogo from '../Assets/immoLogo.jpeg';
-import githubLogo from '../Assets/githubLogo.png';
-import pcLogo from '../Assets/pcLogo.jpeg';
+import immoLogo from '../assets/immoLogo.jpeg';
+import githubLogo from '../assets/githubLogo.png';
+import pcLogo from '../assets/pcLogo.jpeg';
 
 function Portfolio() {
   return (
