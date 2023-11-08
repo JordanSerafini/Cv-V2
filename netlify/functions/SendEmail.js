@@ -45,8 +45,6 @@ const handler = async (event) => {
 
   try {
     await sendgrid.send(message);
-    // Enregistrez un message dans la console
-    console.log('Email sent successfully');
     return {
       statusCode: 200,
       headers: corsHeaders,
@@ -54,8 +52,6 @@ const handler = async (event) => {
     };
   } catch (error) {
     console.error('Error sending email:', error);
-    // Enregistrez un message d'erreur dans la console
-    console.error('Email sending failed:', error);
     return {
       statusCode: error.code || 500,
       headers: corsHeaders,
