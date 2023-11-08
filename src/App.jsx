@@ -11,6 +11,7 @@ import Cv from "./Components/Cv.jsx";
 
 import "./App.css";
 
+
 const useIntersectionObserver = (ref, callback, options = {}) => {
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -41,6 +42,10 @@ function App() {
   const portfoglioRef = useRef(null);
   const emailFormRef = useRef(null);
   const cvRef = useRef(null);
+
+
+  const { downloadCv } = Cv();
+
 
   const checkScrollTop = () => {
     if (!showScroll && window.pageYOffset > 400) {
@@ -84,27 +89,31 @@ function App() {
   return (
     <>
       <HomeStart />
-      <Navbar />
+      <Navbar onCvClick={downloadCv}/>
       <div
         ref={competencesRef}
+        id="competences"
         style={{ opacity: 0, transition: "opacity 1s ease-out" }}
       >
         <Competences />
       </div>
       <div
         ref={skillRef}
+        id="skill"
         style={{ opacity: 0, transition: "opacity 1s ease-out" }}
       >
         <Skill />
       </div>
       <div
         ref={portfoglioRef}
+        id="portfoglio"
         style={{ opacity: 0, transition: "opacity 1s ease-out" }}
       >
         <Portfoglio />
       </div>
       <div
         ref={emailFormRef}
+        id="contact"
         style={{ opacity: 0, transition: "opacity 1s ease-out" }}
       >
         <EmailForm />
