@@ -628,7 +628,7 @@ button {
   cursor: pointer;
   width: 150px;
   border: white 1px solid;
-  box-shadow: 0px 0px 5px 1px #BE9E78;
+  box-shadow: 0px 0px 5px 1px #be9f78d8;
   transition: transform 1s; /* Applique la transition au transform pour la taille */
 }
 
@@ -651,7 +651,7 @@ button:hover {
   transition: background-position .4s, background-size 0s;
 }
 button:active {
-  box-shadow: 0 0 9e9q inset #0009; 
+  box-shadow: 0 0 9e9q inset #be9f78d8; 
   background-color: var(--c);
   color: #fff;
 }

@@ -7,7 +7,7 @@ const EmailForm = () => {
     subject: '',
     text: ''
   });
-
+  
   const [message, setMessage] = useState('');
   const [error, setError] = useState('');
 
