@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import sendMailLogo from '../Assets/sendMailLogo.png';
 
 const EmailForm = () => {
   const [email, setEmail] = useState({
