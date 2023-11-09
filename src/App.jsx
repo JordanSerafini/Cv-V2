@@ -8,9 +8,9 @@ import Portfoglio from "./Components/Portfoglio.jsx";
 import upLogo from "./assets/upLogo.png";
 import EmailForm from "./Components/Email.jsx";
 import Cv from "./Components/Cv.jsx";
+import CvPDF from "/cv-alternance.pdf";
 
 import "./App.css";
-
 
 const useIntersectionObserver = (ref, callback, options = {}) => {
   useEffect(() => {
@@ -43,9 +43,12 @@ function App() {
   const emailFormRef = useRef(null);
   const cvRef = useRef(null);
 
-
-  const { downloadCv } = Cv();
-
+  const downloadCv = () => {
+    const link = document.createElement("a");
+    link.href = CvPDF;
+    link.download = "cv-alternance.pdf";
+    link.click();
+  };
 
   const checkScrollTop = () => {
     if (!showScroll && window.pageYOffset > 400) {
@@ -89,7 +92,7 @@ function App() {
   return (
     <>
       <HomeStart />
-      <Navbar onCvClick={downloadCv}/>
+      <Navbar onCvClick={downloadCv} />
       <div
         ref={competencesRef}
         id="competences"
@@ -121,7 +124,7 @@ function App() {
 
       <div className={`upBtn ${showScroll ? "visible" : ""}`}>
         <img onClick={scrollToTop} src={upLogo} alt="Retour en haut" />
-        <Cv />
+        <Cv onDownload={downloadCv} />
       </div>
     </>
   );

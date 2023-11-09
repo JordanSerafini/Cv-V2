@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import sendMailLogo from '../Assets/sendMailLogo.png';
 
 const EmailForm = () => {
   const [email, setEmail] = useState({
@@ -10,8 +11,8 @@ const EmailForm = () => {
   const [message, setMessage] = useState('');
   const [error, setError] = useState('');
 
-  const sendEmail = async (e) => {
-    e.preventDefault();
+  const sendEmail = async (event) => {
+    event.preventDefault();
     setMessage('');
     setError('');
 
@@ -24,19 +25,17 @@ const EmailForm = () => {
         }
       });
 
-      // Ajout de vérification pour voir si le body de la réponse n'est pas vide
       if (response.ok) {
         const responseBody = await response.json();
-        setMessage(responseBody.message || 'Email sent successfully.');
-        setEmail({ email: '', subject: '', text: '' }); // Reset l'état de l'email
+        setMessage(responseBody.message || 'Email envoyé.');
+        setEmail({ email: '', subject: '', text: '' }); 
       } else {
-        // Gestion des réponses non "ok"
         const errorBody = await response.json();
-        throw new Error(errorBody.error || 'Failed to send email.');
+        throw new Error(errorBody.error || 'Erreur envoi mail.');
       }
     } catch (error) {
-      console.error('Error sending email:', error);
-      setError(error.message || 'Failed to send email. Please try again later.');
+      console.error('Erreur envoi mail.:', error);
+      setError(error.message || 'Erreur envoi mail.');
     }
   };
 
@@ -53,34 +52,36 @@ const EmailForm = () => {
       <div className="Contact-Container">
         <form onSubmit={sendEmail} className='Form-Container'>
           <div className="Contact-Entete">
-            <label className='Contact-Email-Container'>
-              Votre email:
+            <label className='Label-Form Contact-Email-Container'>
+              <h4 className="Form-Title"> Votre email:</h4>
               <input className='Contact-Email'
-                type="email" // Changement du type en email pour la validation native
+                type="email" 
                 value={email.email} 
                 onChange={(e) => setEmail({ ...email, email: e.target.value })}
-                required // Ajout de l'attribut required pour la validation
+                required 
               />
             </label>
-            <label>
-              Sujet:
+            <label className='Label-Form Contact-Subject-Container'>
+              <h4 className="Form-Title"> Sujet:</h4>
               <input 
                 type="text" 
                 value={email.subject} 
                 onChange={(e) => setEmail({ ...email, subject: e.target.value })}
-                required // Ajout de l'attribut required pour la validation
+                required 
               />
             </label>
           </div>
-          <label>
-            Message:
+          <label className='Label-Form Contact-Message-Container'>
+            <h4 className="Form-Title"> Message:</h4>
             <textarea
               value={email.text}
               onChange={(e) => setEmail({ ...email, text: e.target.value })}
-              required // Ajout de l'attribut required pour la validation
+              required 
             />
           </label>
-          <button type="submit">Envoyer</button>
+            <div className="send-Mail-Container">
+              <button className='button-arounder' type="submit">Envoyer</button>
+            </div>
         </form>
         {message && <p className="success-message">{message}</p>}
         {error && <p className="error-message">{error}</p>}

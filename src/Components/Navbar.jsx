@@ -1,3 +1,5 @@
+import CvPDF from '/cv-alternance.pdf';
+
 function Navbar({ onCvClick }) {
   const scrollToComponent = (componentId) => {
     const element = document.getElementById(componentId);

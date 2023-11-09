@@ -20,7 +20,7 @@ const handler = async (event) => {
     return {
       statusCode: 200,
       headers: corsHeaders,
-      body: JSON.stringify({ message: 'You can use CORS' }),
+      body: JSON.stringify({ message: 'utilise cors' }),
     };
   }
 

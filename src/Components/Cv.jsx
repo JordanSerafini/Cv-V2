@@ -1,8 +1,9 @@
+// Cv.js
 import React, { useState } from 'react';
 import DlLogo from '../assets/dlLogo.png';
 import CvPDF from '/cv-alternance.pdf'; // Assurez-vous que le chemin d'accès au fichier est correct
 
-function Cv() {
+function Cv({ onDownload }) {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     function downloadCv() {
@@ -36,7 +37,7 @@ function Cv() {
         <>
             <div className='Download-CV' onClick={handleDownloadClick}>
                 <img className='Download-CV-Logo' src={DlLogo} alt="Download CV" />
-                <p>CV</p>
+                <p className="Download-CV-Text">C V</p>
             </div>
             
             {isModalOpen && (
