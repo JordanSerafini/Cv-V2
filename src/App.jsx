@@ -43,12 +43,7 @@ function App() {
   const emailFormRef = useRef(null);
   const cvRef = useRef(null);
 
-  const downloadCv = () => {
-    const link = document.createElement("a");
-    link.href = CvPDF;
-    link.download = "cv-alternance.pdf";
-    link.click();
-  };
+
 
   const checkScrollTop = () => {
     if (!showScroll && window.pageYOffset > 400) {
@@ -92,7 +87,7 @@ function App() {
   return (
     <>
       <HomeStart />
-      <Navbar onCvClick={downloadCv} />
+      <Navbar  />
       <div
         ref={competencesRef}
         id="competences"
@@ -124,7 +119,6 @@ function App() {
 
       <div className={`upBtn ${showScroll ? "visible" : ""}`}>
         <img onClick={scrollToTop} src={upLogo} alt="Retour en haut" />
-        <Cv onDownload={downloadCv} />
       </div>
     </>
   );

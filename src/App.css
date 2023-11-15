@@ -17,7 +17,6 @@ body {
 .Home-Start {
   position: relative;
   height: 917px;
-  background-color: red;
   display: flex;
   align-items: flex-start;
   flex-direction: column;
@@ -31,26 +30,31 @@ body {
   color: white;
   padding: 1rem;
   top: 50%;
-  left: 50%;
+  left: 45%;
   transform: translate(-50%, -50%);
   min-width: 20rem; 
   display: flex;
   flex-direction: column;
   gap: 2rem;
   flex-wrap: wrap;
-  width: 950px;
+  width: 75%;
 }
 
 .Bonjour {
   font-style: bold;
-  font-size: 1.2rem;
+  font-size: 1.8rem;
   text-indent: 0rem;
+  letter-spacing: 4px;
+
 
 }
 
 .Presentation-detail {
   font-style: italic;
   text-indent: 0rem;
+  letter-spacing: 1px;
+  font-size: 1rem;
+
 }
 
 .Presentation-Text-Container {
@@ -89,12 +93,13 @@ body {
 
 .Presentation-Text {
   position: relative;
-  font-size: 2.5rem;
+  font-size: 3.5rem;
 }
 
 .Text-to-Show {
   visibility: visible;
   z-index: 2;
+  letter-spacing: 4px;
 }
 
 .Text-hidden {
@@ -162,6 +167,22 @@ body {
   background-color: black;
 }
 
+.Dl-Logo {
+  height: 1rem;
+  border-radius: 1rem;
+  
+}
+
+.Item-Cv {
+
+  display: flex;
+  gap: 0.2rem;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+
+}
+
 /* ---------------------------------- Page: Bio ---------------------------------- */
 
 .Bio {
@@ -224,6 +245,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  color: #2b2b2be1;
 }
 
 /* ---------------------------------- Page: PORTFOGLIO ---------------------------------- */
@@ -345,6 +367,8 @@ body {
   opacity: 0; 
   transition: opacity 0.3s; 
   z-index: 1; 
+  font-family: 'Playfair Display', serif;
+
 }
 
 .Portfolio-Project:hover .Project-Content {
@@ -358,61 +382,117 @@ body {
 .Project-Title {
   font-size: 1.1rem;
   font-weight: 700;
+  font-family: 'Playfair Display', serif;
+
 }
 
 /* ---------------------------------- Page: Skill ---------------------------------- */
 .Skill {
-  
   height: 200px;
-  
+  width: 92.8%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap:2rem;
+  margin-left: 40px;
+  margin-top: 5rem;
+  
 }
 
-.Skill-List-Container {
-  width: 100%;
-
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: row;
-
-}
-
-
-.Skill-Logo-Container img {
-  padding: 0.2rem;
-  height: 50px;
-  width: 50px;
-  border: solid rgba(0, 0, 0, 0.644) 1px;
-  border-radius: 50%;
-  transition: transform 1s, box-shadow 1s; 
-  box-shadow: 5px 5px 5px -3px rgba(0, 0, 0, 0.5); 
-}
-
-.Skill-Logo-Container img:hover {
-  transform: rotate(360deg);
-}
-
-
-
-
-.Skill-Title, .Skill-Container-Title {
-  font-family: 'Kenia', sans-serif;
+.Skill-Container-Title{
+  font-size: 1.5rem;
 }
 
 .Skill-Title {
-  padding: 1rem;
-  font-size: 1.8rem;
-  border-bottom: solid black 1px;
+  font-size: 2.2rem;
+  padding-bottom: 1rem;
+  border-bottom: solid rgba(0, 0, 0, 0.308) 1px;
 }
 
-.Skill-Container-Title {
-  font-size: 1.3rem;
+.Skill-Full-Container {
+  height: 100%;
+  width: 90%;
+  display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 4rem;
+
 }
+  
+.Skill-List-Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 8rem;
+  font-family: 'Playfair Display', serif;
+
+}
+
+
+
+.Skill-Logo-Container {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.Skill-Logo-Container img {
+  overflow: hidden;
+  width: 50px;
+  height: 50px;
+  border-radius: 2rem;
+  object-fit: contain; 
+  border: solid rgba(0, 0, 0, 0.664) 0.1px;
+  background-color: white;
+  
+}
+
+.Skill-Category {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 2rem;
+
+}
+
+.Skill-Scrolling-Content {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  animation-fill-mode: forwards;
+  animation: scroll 40s linear infinite;
+  
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translate(calc(-150% - 1.7rem));
+  }
+}
+
+.Skill-Scrolling-Container {
+  overflow: hidden;
+  max-width: 250px; 
+  mask: linear-gradient(to right, transparent, white 10px, white 90%, transparent);
+  -webkit-mask: linear-gradient(to right, transparent, white 10px, white 90%, transparent);
+
+}
+
+.Skill-Name {
+  font-size: 0.8rem;
+}
+
 
 /* ---------------------------------- Page: CONTACT ---------------------------------- */
 
@@ -607,7 +687,7 @@ body {
 
 /* ---------------------------------- Page: MODAL CV ---------------------------------- */
 .Modal-Btn {
-  border: solid rgba(0, 0, 0, 0.582) 1px;
+  border: solid rgba(0, 0, 0, 0.199) 1px;
   padding: 1rem;
   height: 30px;
   display: flex;
@@ -620,6 +700,11 @@ body {
   cursor: pointer;
 }
 
+.Modal-Text {
+  color: #000000ce;
+  padding: 1.5rem;
+}
+
 /* ---------------------------------- Page: BUTTON ---------------------------------- */
 
 button {
@@ -628,34 +713,19 @@ button {
   cursor: pointer;
   width: 150px;
   border: white 1px solid;
-  box-shadow: 0px 0px 5px 1px #be9f78d8;
+  box-shadow: 0px 0px 5px 1px #be9f7893;
   transition: transform 1s; /* Applique la transition au transform pour la taille */
 }
 
 button {
-  --c:  #d1aa7aad; 
-  --_g: linear-gradient(var(--c) 0 0) no-repeat;
-  background: 
-    var(--_g) calc(var(--_p,0%) - 100%) 0%,
-    var(--_g) calc(200% - var(--_p,0%)) 0%,
-    var(--_g) calc(var(--_p,0%) - 100%) 100%,
-    var(--_g) calc(200% - var(--_p,0%)) 100%;
-  background-size: 50.5% calc(var(--_p,0%)/2 + .5%);
-  outline-offset: .1em;
-  transition: background-size .4s, background-position 0s .4s, transform 1s; 
+  background: white;
+  transition: transform 0.4s, box-shadow 0.4s; /* Mise à jour de la propriété de transition */
 }
+
 button:hover {
-
-  transform: scale(1.1);
-  --_p: 100%;
-  transition: background-position .4s, background-size 0s;
+  transform: scale(1.1); /* Correction pour l'agrandissement */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.788)t du box-shadow */
 }
-button:active {
-  box-shadow: 0 0 9e9q inset #be9f78d8; 
-  background-color: var(--c);
-  color: #fff;
-}
-
 
 .Modal {
   cursor: auto;
