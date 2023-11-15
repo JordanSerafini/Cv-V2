@@ -15,7 +15,7 @@ import mochaLogo from "../assets/mochaLogo.png";
 import responsiveLogo from "../assets/responsiveLogo.jpg";
 import bootstrapLogo from "../assets/bootstrapLogo.png";
 import restLogo from "../assets/restLogo.png";
-import chartJSLogo from "../assets/chartJS.png";
+import chartJSLogo from "../assets/chartJs.png";
 import eslintLogo from "../assets/eslintLogo.png";
 import sanitizeLogo from "../assets/sanitizeLogo.png";
 
