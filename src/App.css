@@ -902,9 +902,11 @@ width: 50px;
   }
 
 
+
   /* --------------------------------- HEADER ---------------------------------*/
   .Header {
     position: sticky;
+    top:0;
     width: 100%;
     height: 50px;
     font-size: 0.7rem;
@@ -927,5 +929,217 @@ width: 50px;
     
 
   }
+
+
+/* ---------------------------------- BIO ---------------------------------- */
+.BackgroundTitle {
+  font-size: 4.5rem;
+}
+
+.Bio-Rep {
+  font-size: 1.3rem;
+}
+
+.Bio-Text {
+  font-size: 0.9rem;
+  padding: 0.5rem;
+  padding-top: 10rem;
+}
+
+.Bio-Container {
+}
+
+/* ------------------------------ COMPETENCE/SKILL ---------------------------------- */
+
+.Skill {
+  padding: 1rem;
+  width: 100%;
+  background-color: brown;
+  height: 200px;
+  margin-left: 0px;
+  margin-top: 0rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  
+}
+
+.Skill-Title {
+  font-size: 1.3rem;
+}
+
+.Skill-Category {
+
+}
+
+.Skill-List-Container {
+  width: 100%;
+  gap: 1rem;
+}
+
+.Skill-Container-Title {
+  font-size: 0.7rem;
+}
+
+.Skill-Scrolling-Container {
+  border: solid red 1px;
+  max-height: 100 ;
+  max-width: 70px;
+  height: 100%;
+  mask: none;
+  -webkit-mask: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: visible;
+}
+
+.Skill-Scrolling-Content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  width: 6rem;
+
+  border: solid blue 1px;
+  gap: 0px;
+  animation-fill-mode: forwards;
+  animation: none;
+  
+}
+
+.Skill-Logo-Container {
+  border: solid green 2px;
+  height: 35px;
+  width: 35px;
+  font: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.Skill-Logo-Container img {
+  overflow: hidden;
+  width: 15px;
+  height: 15px;
+  border-radius: 2rem;
+  object-fit: contain; 
+  border: solid rgba(0, 0, 0, 0.664) 0.1px;
+  background-color: white;
+  
+}
+
+.Skill-Name {
+  font-size: 0.4rem;
+}
+
+.List-2 {
+  display: none;
+}
+
+
+/* ------------------------------ COMPETENCE/SKILL ---------------------------------- */
+
+
+/* ----------------------------------- CONTACT ---------------------------------- */
+
+.Contact {
+  height: 65rem;
+}
+
+.Contact-Title-Background {
+  padding-left: 56.5rem;
+  font-size: 2.2rem; 
+  top: 49%;
+
+}
+
+.Contact-Title {
+  font-size: 0.8rem;
+
+}
+
+.Contact-Container {
+  padding: 1rem;
+
+  width: 83.25%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.Contact-Container input {
+  height: 30px;
+  border: solid black 1px;
+  flex-grow: 1;
+  border-radius: 1rem;
+
+}
+
+.Contact-Container textarea {
+  padding: 1rem;
+  border-radius: 1.5rem;
+  height: 100px;
+  width: 100%;
+}
+
+
+
+.Contact-Entete {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.Form-Container {
+  display: flex;
+  flex-direction: column;
+  gap: rem;
+ 
+}
+
+.Contact-Email-Container, .Contact-Subject-Container, .Contact-Message-Container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 0rem;
+
+}
+
+.Label-Form {
+  width: px;
+  gap: 2rem;
+  
+}
+
+.Form-Title {
+  width: 50px;
+  font-family: 'Playfair Display', serif;
+  font-size: large;
+
+}
+
+
+
+.send-Mail-Container {
+ align-self: flex-end;
+}
+
+
+
+/* ------------------------------ COMPETENCE/SKILL ---------------------------------- */
+/* ------------------------------ COMPETENCE/SKILL ---------------------------------- */
+/* ------------------------------ COMPETENCE/SKILL ---------------------------------- */
+/* ------------------------------ COMPETENCE/SKILL ---------------------------------- */
+/* ------------------------------ COMPETENCE/SKILL ---------------------------------- */
 
 }

@@ -20,19 +20,28 @@ import eslintLogo from "../assets/eslintLogo.png";
 import sanitizeLogo from "../assets/sanitizeLogo.png";
 
 function SkillCategory({ title, skills }) {
-  const duplicatedSkills = [...skills, ...skills];
+  // Première liste de compétences sans modification
+  const firstListSkills = skills.map((skill, index) => (
+    <div className="Skill-Logo-Container" key={`first-${index}`}>
+      <img src={skill.logo} alt={skill.name} />
+      <p className="Skill-Name">{skill.name}</p>
+    </div>
+  ));
+
+  // Seconde liste de compétences avec une classe supplémentaire
+  const secondListSkills = skills.map((skill, index) => (
+    <div className={`Skill-Logo-Container List-2`} key={`second-${index}`}>
+      <img src={skill.logo} alt={skill.name} />
+      <p className="Skill-Name">{skill.name}</p>
+    </div>
+  ));
 
   return (
     <div className="Skill-Category">
       <div className="Skill-Container-Title">{title}:</div>
       <div className="Skill-Scrolling-Container">
         <div className="Skill-Scrolling-Content">
-          {duplicatedSkills.map((skill, index) => (
-            <div className="Skill-Logo-Container" key={index}>
-              <img src={skill.logo} alt={skill.name} />
-              <p className="Skill-Name">{skill.name}</p>
-            </div>
-          ))}
+          {firstListSkills.concat(secondListSkills)}
         </div>
       </div>
     </div>
