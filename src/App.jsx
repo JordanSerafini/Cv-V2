@@ -85,7 +85,7 @@ function App() {
   }, [showScroll]);
 
   return (
-    <>
+    <div className="App">
       <HomeStart />
       <Navbar  />
       <div
@@ -120,7 +120,7 @@ function App() {
       <div className={`upBtn ${showScroll ? "visible" : ""}`}>
         <img onClick={scrollToTop} src={upLogo} alt="Retour en haut" />
       </div>
-    </>
+    </div>
   );
 }
 
