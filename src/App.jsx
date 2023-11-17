@@ -48,6 +48,14 @@ function App() {
   const cvRef = useRef(null);
 
 
+  const handleToggleNavbar = () => {
+    if (showNavbar) {
+      setShowNavbar(false);
+    } else {
+      setShowNavbar(true);
+    }
+  };
+
   const toggleNavbar = () => {
     setShowNavbar(!showNavbar); 
   };
@@ -141,7 +149,7 @@ function App() {
           </div>
         </>
       )}
-            {showNavbar && <MobileNavBar toggleNavbar={toggleNavbar}/>} {/* Ajouté pour afficher mobileNavBar */}
+            {showNavbar && <MobileNavBar className="mobileNavbar-entering" toggleNavbar={toggleNavbar}/>} {/* Ajouté pour afficher mobileNavBar */}
 
 
       

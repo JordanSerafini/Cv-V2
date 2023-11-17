@@ -930,9 +930,22 @@ width: 50px;
   align-items: center;
   flex-direction: row;
   border-bottom: 1px rgba(0, 0, 0, 0.425) solid;
+  animation: slideInFromRight 0.4s forwards; /* Durée de l'animation */
 
-  
 }
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%); /* Commence en dehors de l'écran sur la droite */
+  }
+  to {
+    transform: translateX(0); /* Termine à sa position finale */
+  }
+}
+
+.mobileNavbar-entering {
+}
+
 .Item-X img, .navbarToggleBtn img {
   height: 20px;
 }
