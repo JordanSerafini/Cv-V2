@@ -23,7 +23,7 @@ function SkillCategory({ title, skills }) {
   // Première liste de compétences sans modification
   const firstListSkills = skills.map((skill, index) => (
     <div className="Skill-Logo-Container" key={`first-${index}`}>
-      <img src={skill.logo} alt={skill.name} />
+      <img src={skill.logo} alt={skill.logo} />
       <p className="Skill-Name">{skill.name}</p>
     </div>
   ));
@@ -31,7 +31,7 @@ function SkillCategory({ title, skills }) {
   // Seconde liste de compétences avec une classe supplémentaire
   const secondListSkills = skills.map((skill, index) => (
     <div className={`Skill-Logo-Container List-2`} key={`second-${index}`}>
-      <img src={skill.logo} alt={skill.name} />
+      <img src={skill.logo} alt={skill.logo} />
       <p className="Skill-Name">{skill.name}</p>
     </div>
   ));
@@ -87,8 +87,7 @@ function Skill() {
   ];
 
   return (
-    <div className="Skill">
-      <div className="Skill-Full-Container">
+      <div className="Skill-2">
         <h2 className="Skill-Title">Compétences</h2>
         <div className="Skill-List-Container">
           <SkillCategory title="Front-end" skills={frontendSkills} />
@@ -96,7 +95,6 @@ function Skill() {
           <SkillCategory title="Autres" skills={otherSkills} />
         </div>
       </div>
-    </div>
   );
 }
 

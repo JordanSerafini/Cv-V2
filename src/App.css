@@ -406,29 +406,21 @@ Mes contributions sur GitHub témoignent de mon engagement dans la communauté d
 }
 
 /* ---------------------------------- Page: Skill ---------------------------------- */
-.Skill {
-  height: 200px;
-  width: 92.8%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-left: 40px;
-  margin-top: 5rem;
-  
-}
+
 
 .Skill-Container-Title{
   font-size: 1.5rem;
 }
 
 .Skill-Title {
+  padding-top: 2rem;
+
   font-size: 2.2rem;
   padding-bottom: 1rem;
   border-bottom: solid rgba(0, 0, 0, 0.308) 1px;
 }
 
-.Skill-Full-Container {
+.Skill-2 {
   height: 100%;
   width: 90%;
   display: flex;
@@ -918,6 +910,10 @@ width: 50px;
     top: 14.5px;
     right: 17px;
     z-index: 100; /* Assurez-vous qu'il est au-dessus des autres éléments */
+    border: solid black 1px;
+    padding: 0.25rem;
+    border-radius: 20%;
+    background-color:rgba(255, 255, 255, 0.788);
   }
 
 
@@ -928,7 +924,7 @@ width: 50px;
   right: 0;
   width: 100vw;
   height: 8vh;
-  background-color:rgba(245, 245, 245, 0.945) ;
+  background-color:rgba(255, 255, 255, 0.788) ;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -1022,22 +1018,18 @@ width: 50px;
 
 /* ------------------------------ COMPETENCE/SKILL ---------------------------------- */
 
-.Skill {
-  padding: 1rem;
+.Skill-2 {
   width: 100%;
-  background-color: brown;
-  height: 200px;
-  margin-left: 0px;
-  margin-top: 0rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap:1rem;
   
 }
 
 .Skill-Title {
+  align-self: center;
   font-size: 1.3rem;
 }
 
@@ -1045,17 +1037,29 @@ width: 50px;
 
 }
 
+.Skill-Full-Container {
+
+}
+
 .Skill-List-Container {
   width: 100%;
-  gap: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 0;
 }
 
 .Skill-Container-Title {
   font-size: 0.7rem;
 }
 
+.Skill-Category {
+  gap:0.2rem;
+} 
 .Skill-Scrolling-Container {
-  border: solid red 1px;
+  padding: 0.1rem;
+
   max-height: 100 ;
   max-width: 70px;
   height: 100%;
@@ -1076,7 +1080,6 @@ width: 50px;
 
   width: 6rem;
 
-  border: solid blue 1px;
   gap: 0px;
   animation-fill-mode: forwards;
   animation: none;
@@ -1084,7 +1087,6 @@ width: 50px;
 }
 
 .Skill-Logo-Container {
-  border: solid green 2px;
   height: 35px;
   width: 35px;
   font: 0.5rem;

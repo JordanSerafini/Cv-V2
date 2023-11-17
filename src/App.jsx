@@ -134,7 +134,7 @@ function App() {
       </div>
 
        {/* Logo pour afficher la navbar en version mobile */}
-       {showScroll && (
+       {showScroll && !showNavbar && (
         <>
           <div className="navbarToggleBtn">
             <img onClick={toggleNavbar} src={navbarLogo} alt="Afficher la navbar" />
