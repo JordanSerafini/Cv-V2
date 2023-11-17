@@ -18,9 +18,16 @@ body {
   display: none;
 }
 .Site-Link {
+  z-index: 500000;
   color: white;
 }
 
+.Project-Text {
+  font-size: 0.9rem;
+}
+/*                
+Plongez au cœur de mon projet majeur, une application dédiée au monde de l'immobilier qui illustre mon habileté à conjuguer des solutions back-end robustes avec une expérience utilisateur fluide et intuitive sur le front-end. Technologies utilisées : Node.js, React, PostgreSQL, etc.
+*/
 /* ---------------------------------- Page: HOME-START ---------------------------------- */
 
 .Home-Start {
