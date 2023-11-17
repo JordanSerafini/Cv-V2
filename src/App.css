@@ -10,6 +10,9 @@ body {
   font-style: italic;
 }
 
+.navbarToggleBtn {
+  display: none; /* Cache le bouton sur desktop */
+}
 
 
 /* ---------------------------------- Page: HOME-START ---------------------------------- */
@@ -868,15 +871,41 @@ width: 50px;
   }
 }
 
-
-
+/* ---------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------- */
 /* ---------------------------------- MOBILE ---------------------------------- */
+/* ---------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------- */
+
 
 @media screen and (max-width: 768px) {
 
   .App {
     overflow: hidden;
   }
+
+  .Navbar {
+    display: none;
+  }
+
+  .navbarToggleBtn {
+    display: block; /* Affiche le bouton sur mobile */
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100; /* Assurez-vous qu'il est au-dessus des autres éléments */
+  }
+
+  .visible {
+    display: block;
+  }
+
+  .navbarVisible {
+    display: block; /* Ajoutez cette classe pour contrôler l'affichage */
+  }
+
+
+
 
   .Home-Start {
     height: 100vh;
@@ -905,6 +934,8 @@ width: 50px;
 
   /* --------------------------------- HEADER ---------------------------------*/
   .Header {
+    display: none;
+
     position: sticky;
     top:0;
     width: 100%;
@@ -922,6 +953,7 @@ width: 50px;
 
   .Navbar {
     width: 100%;
+    
 }
 
   .Navbar-Item { 

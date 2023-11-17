@@ -9,6 +9,7 @@ import upLogo from "./assets/upLogo.png";
 import EmailForm from "./Components/Email.jsx";
 import Cv from "./Components/Cv.jsx";
 import CvPDF from "/cv-alternance.pdf";
+import navbarLogo from "./assets/menuLogoAnim.gif";
 
 import "./App.css";
 
@@ -36,6 +37,7 @@ const useIntersectionObserver = (ref, callback, options = {}) => {
 
 function App() {
   const [showScroll, setShowScroll] = useState(false);
+  const [showNavbar, setShowNavbar] = useState(false);
 
   const competencesRef = useRef(null);
   const skillRef = useRef(null);
@@ -44,6 +46,10 @@ function App() {
   const cvRef = useRef(null);
 
 
+  const toggleNavbar = () => {
+    console.log("toggleNavbar");
+    setShowNavbar(!showNavbar); 
+  };
 
   const checkScrollTop = () => {
     if (!showScroll && window.pageYOffset > 400) {
@@ -86,6 +92,17 @@ function App() {
 
   return (
     <div className="App">
+
+       {/* Bouton pour afficher la navbar en version mobile */}
+       <div className={`navbarToggleBtn ${showScroll ? "visible" : ""}`}>
+        <button onClick={toggleNavbar}>
+          {/* Ici, mettez votre icône de menu ou autre élément graphique */}
+          <img src={navbarLogo} alt="Menu" />
+        </button>
+      </div>
+
+      {/* Conditionnellement afficher la Navbar en fonction de l'état showNavbar */}
+      {showNavbar && <Navbar className="navbarVisible" />}
       <HomeStart />
       <Navbar  />
       <div
@@ -119,6 +136,11 @@ function App() {
 
       <div className={`upBtn ${showScroll ? "visible" : ""}`}>
         <img onClick={scrollToTop} src={upLogo} alt="Retour en haut" />
+      </div>
+
+       {/* Logo pour afficher la navbar en version mobile */}
+       <div className={`navbarToggleBtn ${showScroll ? "visible" : ""}`}>
+        <button onClick={toggleNavbar} src={navbarLogo} alt="Afficher la navbar" />
       </div>
     </div>
   );
