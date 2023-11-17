@@ -3,6 +3,12 @@ import githubLogo from "../assets/githubLogo.png";
 import pcLogo from "../assets/pcLogo.jpeg";
 
 function Portfolio() {
+  const handleClick = (e) => {
+    if (window.matchMedia("(max-width: 768px)").matches) {
+      // Empêche la redirection en mode mobile
+      e.preventDefault();
+    }
+  };
   return (
     <div className="Portfolio">
       <div className="Portfolio-Container">
@@ -18,6 +24,7 @@ function Portfolio() {
               href="https://immopros-app.com/"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={handleClick}
             >
               <div className="Project-Content">
                 <h3 className="Project-Title">
@@ -28,7 +35,9 @@ function Portfolio() {
               <div className="Project-Hover">
                 <p>
                 Plongez au cœur de mon projet majeur, une application dédiée au monde de l'immobilier qui illustre mon habileté à conjuguer des solutions back-end robustes avec une expérience utilisateur fluide et intuitive sur le front-end. Technologies utilisées : Node.js, React, PostgreSQL, etc.
+                <a className="Site-Link" href="https://immopros-app.com/" target="_blank" rel="noopener noreferrer"><br></br><br></br>Lien vers le site</a>
                 </p>
+
               </div>
             </a>
           </div>
@@ -39,6 +48,7 @@ function Portfolio() {
               href="https://github.com/JordanSerafini"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={handleClick}
             >
               <div className="Project-Content">
                 <h3 className="Project-Title">

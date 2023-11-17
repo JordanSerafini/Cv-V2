@@ -17,6 +17,9 @@ body {
 .mobileNavBar {
   display: none;
 }
+.Site-Link {
+  color: white;
+}
 
 /* ---------------------------------- Page: HOME-START ---------------------------------- */
 
@@ -1095,9 +1098,22 @@ width: 50px;
 }
 
 
-/* ------------------------------ COMPETENCE/SKILL ---------------------------------- */
+/* ------------------------------ PORTFOLIO ---------------------------------- */
 
+.Portfolio-Rep {
+  font-size: 1.5rem;
+}
 
+.Portfolio-BackText {
+  font-size: 3.3rem;
+  top: 110px;
+}
+
+.Project-Hover {
+  padding: 0.1rem;
+  font-size: 0.75rem;
+  
+}
 /* ----------------------------------- CONTACT ---------------------------------- */
 
 .Contact {
