@@ -5,11 +5,13 @@ import Navbar from "./Components/Navbar.jsx";
 import Competences from "./Components/compétences.jsx";
 import Skill from "./Components/Skill.jsx";
 import Portfoglio from "./Components/Portfoglio.jsx";
+import MobileNavBar from "./Components/MobileNavBar.jsx";
+
 import upLogo from "./assets/upLogo.png";
 import EmailForm from "./Components/Email.jsx";
 import Cv from "./Components/Cv.jsx";
 import CvPDF from "/cv-alternance.pdf";
-import navbarLogo from "./assets/menuLogoAnim.gif";
+import navbarLogo from "./assets/mobileNavLogo.png";
 
 import "./App.css";
 
@@ -47,7 +49,6 @@ function App() {
 
 
   const toggleNavbar = () => {
-    console.log("toggleNavbar");
     setShowNavbar(!showNavbar); 
   };
 
@@ -93,16 +94,10 @@ function App() {
   return (
     <div className="App">
 
-       {/* Bouton pour afficher la navbar en version mobile */}
-       <div className={`navbarToggleBtn ${showScroll ? "visible" : ""}`}>
-        <button onClick={toggleNavbar}>
-          {/* Ici, mettez votre icône de menu ou autre élément graphique */}
-          <img src={navbarLogo} alt="Menu" />
-        </button>
-      </div>
+       
 
       {/* Conditionnellement afficher la Navbar en fonction de l'état showNavbar */}
-      {showNavbar && <Navbar className="navbarVisible" />}
+  {showNavbar && <Navbar className="navbarVisible" />}
       <HomeStart />
       <Navbar  />
       <div
@@ -139,9 +134,17 @@ function App() {
       </div>
 
        {/* Logo pour afficher la navbar en version mobile */}
-       <div className={`navbarToggleBtn ${showScroll ? "visible" : ""}`}>
-        <button onClick={toggleNavbar} src={navbarLogo} alt="Afficher la navbar" />
-      </div>
+       {showScroll && (
+        <>
+          <div className="navbarToggleBtn">
+            <img onClick={toggleNavbar} src={navbarLogo} alt="Afficher la navbar" />
+          </div>
+        </>
+      )}
+            {showNavbar && <MobileNavBar toggleNavbar={toggleNavbar}/>} {/* Ajouté pour afficher mobileNavBar */}
+
+
+      
     </div>
   );
 }

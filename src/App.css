@@ -14,6 +14,9 @@ body {
   display: none; /* Cache le bouton sur desktop */
 }
 
+.mobileNavBar {
+  display: none;
+}
 
 /* ---------------------------------- Page: HOME-START ---------------------------------- */
 
@@ -891,18 +894,33 @@ width: 50px;
   .navbarToggleBtn {
     display: block; /* Affiche le bouton sur mobile */
     position: fixed;
-    top: 0;
-    right: 0;
+    top: 14.5px;
+    right: 17px;
     z-index: 100; /* Assurez-vous qu'il est au-dessus des autres éléments */
   }
 
-  .visible {
-    display: block;
-  }
 
-  .navbarVisible {
-    display: block; /* Ajoutez cette classe pour contrôler l'affichage */
-  }
+.Mobile-Navbar {
+  z-index: 500;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 8vh;
+  background-color:whitesmoke ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 2rem;
+  border-bottom: 1px rgba(0, 0, 0, 0.425) solid;
+
+  
+}
+.Item-X img, .navbarToggleBtn img {
+  height: 20px;
+}
+
 
 
 
@@ -1083,13 +1101,14 @@ width: 50px;
 /* ----------------------------------- CONTACT ---------------------------------- */
 
 .Contact {
-  height: 65rem;
+  height: 40rem;
 }
 
 .Contact-Title-Background {
   padding-left: 56.5rem;
-  font-size: 2.2rem; 
+  font-size: 1.8rem; 
   top: 49%;
+  left: 100%;
 
 }
 
