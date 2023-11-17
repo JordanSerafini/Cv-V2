@@ -18,15 +18,18 @@ body {
   display: none;
 }
 .Site-Link {
-  z-index: 500000;
+  z-index: 500;
   color: white;
 }
 
 .Project-Text {
   font-size: 0.9rem;
 }
+.Project-Hover {
+  z-index: 100;
+}
 /*                
-Plongez au cœur de mon projet majeur, une application dédiée au monde de l'immobilier qui illustre mon habileté à conjuguer des solutions back-end robustes avec une expérience utilisateur fluide et intuitive sur le front-end. Technologies utilisées : Node.js, React, PostgreSQL, etc.
+Mes contributions sur GitHub témoignent de mon engagement dans la communauté du code open source. Chaque repository est une opportunité d'apprendre, de partager et de collaborer.
 */
 /* ---------------------------------- Page: HOME-START ---------------------------------- */
 
@@ -884,9 +887,17 @@ width: 50px;
   }
 }
 
+
+
+/* ---------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------- */
 /* ---------------------------------- MOBILE ---------------------------------- */
+/* ---------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------- */
 
@@ -917,12 +928,11 @@ width: 50px;
   right: 0;
   width: 100vw;
   height: 8vh;
-  background-color:whitesmoke ;
+  background-color:rgba(245, 245, 245, 0.945) ;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   flex-direction: row;
-  gap: 2rem;
   border-bottom: 1px rgba(0, 0, 0, 0.425) solid;
 
   
@@ -989,6 +999,7 @@ width: 50px;
     
 
   }
+
 
 
 /* ---------------------------------- BIO ---------------------------------- */

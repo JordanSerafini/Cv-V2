@@ -4,11 +4,7 @@ import pcLogo from "../assets/pcLogo.jpeg";
 
 function Portfolio() {
 
-  const handleClick = (e) => {
-    if (window.matchMedia("(max-width: 768px)").matches) {
-      e.preventDefault(); // Empêche la redirection en mode mobile
-    }
-  };
+
 
   return (
     <div className="Portfolio">
@@ -19,6 +15,8 @@ function Portfolio() {
         </div>
 
         <div className="Portfolio-Project-Container">
+
+
           {/* Projet 1 */}
           <div className="Portfolio-Project Project-1">
             {/* Le lien englobe uniquement le titre et l'image */}
@@ -43,28 +41,31 @@ function Portfolio() {
             </div>
           </div>
 
-          {/* Projet 2 */}
-          <div className="Portfolio-Project Project-2">
+       
+           {/* Projet 2 */}
+           <div className="Portfolio-Project Project-2">
+            {/* Le lien englobe uniquement le titre et l'image */}
             <a
               href="https://github.com/JordanSerafini"
               target="_blank"
               rel="noopener noreferrer"
-              onClick={handleClick}
             >
               <div className="Project-Content">
                 <h3 className="Project-Title">
-                  Expérimentations et Contributions Open Source
+                Expérimentations et Contributions Open Source
                 </h3>
-                <img src={githubLogo} alt="Open Source Contributions" />
-              </div>
-              <div className="Project-Hover">
-                <p>
-                Mes contributions sur GitHub témoignent de mon engagement dans la communauté du code open source. Chaque repository est une opportunité d'apprendre, de partager et de collaborer.
-                </p>
+                <img src={githubLogo} alt="github site" />
               </div>
             </a>
+            <div className="Project-Hover">
+              <p>
+              Mes contributions sur GitHub témoignent de mon engagement dans la communauté du code open source. Chaque repository est une opportunité d'apprendre, de partager et de collaborer.
+                <br /><br />
+                <a className="Site-Link" href="https://github.com/JordanSerafini" target="_blank" rel="noopener noreferrer">Lien vers le site</a>
+              </p>
+            </div>
           </div>
-
+          
           {/* Projet 3 */}
           <div className="Portfolio-Project Project-3">
             <h3 className="Project-Title">Compétences Techniques</h3>
