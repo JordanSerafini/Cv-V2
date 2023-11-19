@@ -1158,20 +1158,27 @@ width: 50px;
 }
 
 .Contact-Title-Background {
+  
   width: 100vw;
-  font-size: 1.8rem; 
-  left: 74%;
+  font-size: 1.3rem; 
+  left: 75%;
 
+ 
 
 }
 
 .Contact-Title {
-  font-size: 0.8rem;
+  align-self: center;
+  font-size: 0.5rem;
 
 }
 
 .Contact-Title-Container {
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   }
   
 
