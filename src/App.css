@@ -1159,10 +1159,9 @@ width: 50px;
 
 .Contact-Title-Background {
   width: 100vw;
-  max-width: 100vw;
   font-size: 1.8rem; 
-  top: 49%;
-  left: 235%;
+  left: 74%;
+
 
 }
 
@@ -1170,6 +1169,11 @@ width: 50px;
   font-size: 0.8rem;
 
 }
+
+.Contact-Title-Container {
+  width: 100%;
+  }
+  
 
 .Contact-Container {
   padding: 1rem;
