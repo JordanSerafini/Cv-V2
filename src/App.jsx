@@ -47,7 +47,6 @@ function App() {
   const emailFormRef = useRef(null);
   const cvRef = useRef(null);
 
-
   const handleToggleNavbar = () => {
     if (showNavbar) {
       setShowNavbar(false);
@@ -57,7 +56,7 @@ function App() {
   };
 
   const toggleNavbar = () => {
-    setShowNavbar(!showNavbar); 
+    setShowNavbar(!showNavbar);
   };
 
   const checkScrollTop = () => {
@@ -101,58 +100,63 @@ function App() {
 
   return (
     <div className="App">
-
-       
-
       {/* Conditionnellement afficher la Navbar en fonction de l'état showNavbar */}
-  {showNavbar && <Navbar className="navbarVisible" />}
+      {showNavbar && <Navbar className="navbarVisible" />}
       <HomeStart />
-      <Navbar  />
-      <div
-        ref={competencesRef}
-        id="competences"
-        style={{ opacity: 0, transition: "opacity 1s ease-out" }}
-      >
-        <Competences />
+      <Navbar />
+      <div className="Content">
+        <div
+          ref={competencesRef}
+          id="competences"
+          style={{ opacity: 0, transition: "opacity 1s ease-out" }}
+        >
+          <Competences />
+        </div>
+        <div
+          ref={skillRef}
+          id="skill"
+          style={{ opacity: 0, transition: "opacity 1s ease-out" }}
+        >
+          <Skill />
+        </div>
+        <div
+          ref={portfoglioRef}
+          id="portfoglio"
+          style={{ opacity: 0, transition: "opacity 1s ease-out" }}
+        >
+          <Portfoglio />
+        </div>
+        <div
+          ref={emailFormRef}
+          id="contact"
+          style={{ opacity: 0, transition: "opacity 1s ease-out" }}
+        >
+          <EmailForm />
+        </div>
       </div>
-      <div
-        ref={skillRef}
-        id="skill"
-        style={{ opacity: 0, transition: "opacity 1s ease-out" }}
-      >
-        <Skill />
-      </div>
-      <div
-        ref={portfoglioRef}
-        id="portfoglio"
-        style={{ opacity: 0, transition: "opacity 1s ease-out" }}
-      >
-        <Portfoglio />
-      </div>
-      <div
-        ref={emailFormRef}
-        id="contact"
-        style={{ opacity: 0, transition: "opacity 1s ease-out" }}
-      >
-        <EmailForm />
-      </div>
-
       <div className={`upBtn ${showScroll ? "visible" : ""}`}>
         <img onClick={scrollToTop} src={upLogo} alt="Retour en haut" />
       </div>
-
-       {/* Logo pour afficher la navbar en version mobile */}
-       {showScroll && !showNavbar && (
+      {/* Logo pour afficher la navbar en version mobile */}
+      {showScroll && !showNavbar && (
         <>
           <div className="navbarToggleBtn">
-            <img onClick={toggleNavbar} src={navbarLogo} alt="Afficher la navbar" />
+            <img
+              onClick={toggleNavbar}
+              src={navbarLogo}
+              alt="Afficher la navbar"
+            />
           </div>
         </>
       )}
-            {showNavbar && <MobileNavBar className="mobileNavbar-entering" toggleNavbar={toggleNavbar}/>} {/* Ajouté pour afficher mobileNavBar */}
+      {showNavbar && (
+        <MobileNavBar
+          className="mobileNavbar-entering"
+          toggleNavbar={toggleNavbar}
+        />
+      )}{" "}
+      <p className="Responsive"> Responsive In progress</p>
 
-
-      
     </div>
   );
 }

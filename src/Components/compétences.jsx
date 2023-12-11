@@ -1,8 +1,8 @@
 function Competences() {
     return (
-    <div className="Bio">
+    <div className="Bio Section">
             {/*  CONTAINER PRESENTATION  */}
-      <div className="Bio-Container">
+      <div className="Bio-Container Container">
                 {/*  ENTETE PRESENTATION  */}
         <div className="Bio-Title">
         <h1 className="BackgroundTitle">QUI SUIS JE ?</h1>

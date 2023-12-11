@@ -7,9 +7,9 @@ function Portfolio() {
 
 
   return (
-    <div className="Portfolio">
-      <div className="Portfolio-Container">
-        <h2 className="Portfolio-Rep">Mes projets</h2>
+    <div className="Portfolio Section">
+      <div className="Portfolio Container">
+        <h2 className="Portfolio-Rep Bio-Rep">Mes projets</h2>
         <div className="Portfolio-BackText">
           <p>PORTFOLIO</p>
         </div>

@@ -20,7 +20,7 @@ const handler = async (event) => {
     return {
       statusCode: 200,
       headers: corsHeaders,
-      body: JSON.stringify({ message: 'utilise cors' }),
+      body: JSON.stringify({ message: 'CORS preflight response.' }),
     };
   }
 
@@ -28,28 +28,32 @@ const handler = async (event) => {
     return { 
       statusCode: 405, 
       headers: corsHeaders,
-      body: 'Method Not Allowed' 
+      body: JSON.stringify({ message: 'Method Not Allowed' }),
     };
   }
 
-  const data = JSON.parse(event.body);
-
-  const message = {
-    to: 'jordanserafini.74@gmail.com', 
-    from: 'immoprosoclock@gmail.com', 
-    subject: `${data.subject}, recu depuis: ${data.email}` ,
-    text:  data.text
-  };
-
   try {
+    // Vérifiez que vous avez un corps de requête avant de le parser.
+    if (!event.body) {
+      throw new Error('Missing request body.');
+    }
+    
+    const data = JSON.parse(event.body);
+
+    const message = {
+      to: 'jordanserafini.74@gmail.com', 
+      from: 'immoprosoclock@gmail.com', 
+      subject: `${data.subject}, recu depuis: ${data.email}` ,
+      text: data.text
+    };
+
     await sendgrid.send(message);
-    console.log('Email sent successfully');
     return {
       statusCode: 200,
       headers: corsHeaders,
+      body: JSON.stringify({ message: 'Email envoyé' }),
     };
   } catch (error) {
-    console.error('Error sending email:', error);
     console.error('Email sending failed:', error);
     return {
       statusCode: error.code || 500,

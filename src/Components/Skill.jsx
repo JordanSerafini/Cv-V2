@@ -87,7 +87,7 @@ function Skill() {
   ];
 
   return (
-      <div className="Skill-2">
+      <div className="Skill-2 Section">
         <h2 className="Skill-Title">Compétences</h2>
         <div className="Skill-List-Container">
           <SkillCategory title="Front-end" skills={frontendSkills} />

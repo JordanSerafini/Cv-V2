@@ -28,10 +28,6 @@ body {
 .Project-Hover {
   z-index: 100;
 }
-
-.Responsive {
-  display: none;
-}
 /*                
 Mes contributions sur GitHub témoignent de mon engagement dans la communauté du code open source. Chaque repository est une opportunité d'apprendre, de partager et de collaborer.
 */
@@ -289,7 +285,7 @@ Mes contributions sur GitHub témoignent de mon engagement dans la communauté d
   color: rgba(0, 0, 0, 0.1); 
   position: absolute;
   left: 50%;
-  top: 15%; 
+  top: 14%; 
   transform: translate(-50%, -50%); 
   margin: 0; 
   z-index: 1; 
@@ -318,7 +314,6 @@ Mes contributions sur GitHub témoignent de mon engagement dans la communauté d
 }
 
 .Portfolio-Project-Container {
-  padding: 5rem;
   width: 90%;
   display: flex;
   justify-content: space-evenly;
@@ -898,7 +893,7 @@ width: 50px;
 /* ---------------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------- */
 
-/*
+
 @media screen and (max-width: 768px) {
 
   .App {
@@ -910,11 +905,11 @@ width: 50px;
   }
 
   .navbarToggleBtn {
-    display: block; 
+    display: block; /* Affiche le bouton sur mobile */
     position: fixed;
     top: 14.5px;
     right: 17px;
-    z-index: 100;
+    z-index: 100; /* Assurez-vous qu'il est au-dessus des autres éléments */
     border: solid black 1px;
     padding: 0.25rem;
     border-radius: 20%;
@@ -937,14 +932,14 @@ width: 50px;
   border-bottom: 1px rgba(0, 0, 0, 0.425) solid;
   animation: slideInFromRight 0.4s forwards; /* Durée de l'animation */
 
+}
 
-/*
 @keyframes slideInFromRight {
   from {
-    transform: translateX(100%); 
+    transform: translateX(100%); /* Commence en dehors de l'écran sur la droite */
   }
   to {
-    transform: translateX(0);
+    transform: translateX(0); /* Termine à sa position finale */
   }
 }
 
@@ -985,7 +980,6 @@ width: 50px;
 
 
   /* --------------------------------- HEADER ---------------------------------*/
-  /*
   .Header {
     display: none;
 
@@ -1016,9 +1010,8 @@ width: 50px;
   }
 
 
-*/
+
 /* ---------------------------------- BIO ---------------------------------- */
-/*
 .BackgroundTitle {
   font-size: 4.5rem;
 }
@@ -1035,10 +1028,9 @@ width: 50px;
 
 .Bio-Container {
 }
-*/
 
 /* ------------------------------ COMPETENCE/SKILL ---------------------------------- */
-/*
+
 .Skill-2 {
   width: 100%;
   display: flex;
@@ -1137,10 +1129,10 @@ width: 50px;
 .List-2 {
   display: none;
 }
-*/
+
 
 /* ------------------------------ PORTFOLIO ---------------------------------- */
-/*
+
 .Portfolio-Rep {
   font-size: 1.5rem;
 }
@@ -1155,9 +1147,8 @@ width: 50px;
   font-size: 0.75rem;
   
 }
-*/
 /* ----------------------------------- CONTACT ---------------------------------- */
-/*
+
 .Contact {
   height: 35rem;
   padding: 1rem;
@@ -1259,7 +1250,6 @@ width: 50px;
  align-self: flex-end;
 }
 
-*/
 
 
 /* ------------------------------ COMPETENCE/SKILL ---------------------------------- */
@@ -1267,37 +1257,5 @@ width: 50px;
 /* ------------------------------ COMPETENCE/SKILL ---------------------------------- */
 /* ------------------------------ COMPETENCE/SKILL ---------------------------------- */
 /* ------------------------------ COMPETENCE/SKILL ---------------------------------- */
-
-
-@media screen and (max-width: 1300px) {
-
-
-  .Home-Start {
-    display: none;
-
-  }
-
-  .Skill-2 {
-    display: none;
-  }
-
-.Section {
-    display: none;
-  }
-
-  .Contact {
-    display: none;
-  }
-
-  .Header {
-    display: none;
-  }      
-  
-  .Responsive {
-    display: block;
-    text-align: center;
-    padding-top: 25%;
-    font-size: 2rem;
-  }
 
 }
