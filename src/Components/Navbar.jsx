@@ -46,7 +46,7 @@ function Navbar() {
     
 
     <header className="Header">
-      <div className="Header-Tile">Jordan S</div>
+      <div className="Header-Tile">Jordan S, <span className='Construc'>(site en construction)</span></div>
       <div className="Navbar">
         <div className="Navbar-Item" onClick={() => scrollToComponent('competences')}>Home</div>
         <div className="Navbar-Item Item-Cv" onClick={handleDownloadClick}>
@@ -54,7 +54,7 @@ function Navbar() {
           <img className='Dl-Logo' src={dlLogo} alt="" />
           </div>
         <div className="Navbar-Item" onClick={() => scrollToComponent('portfoglio')}>Portfoglio</div>
-        <div className="Navbar-Item" onClick={() => scrollToComponent('contact')}>Contact</div>
+        <div className="Navbar-Item Last-Item" onClick={() => scrollToComponent('contact')}>Contact</div>
       </div>
 
       {isModalOpen && (

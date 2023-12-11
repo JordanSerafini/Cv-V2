@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Background from "../assets/background.jpeg";
 import CvPhoto from "../assets/cv-pics.jpg";
+import ScrollDownLogo from "../assets/scrollDownLogo.gif";
 
 function HomeStart() {
   const firstPart = `JE SUIS JORDAN SERAFINI, 
@@ -11,6 +12,7 @@ function HomeStart() {
   const [cursorVisible, setCursorVisible] = useState(true);
   const [isFirstPartTyping, setIsFirstPartTyping] = useState(true);
   const [isSecondPartTyping, setIsSecondPartTyping] = useState(false);
+  const [isScrollDownVisible, setIsScrollDownVisible] = useState(false);
 
   useEffect(() => {
     let cursorInterval = setInterval(() => {
@@ -37,6 +39,11 @@ function HomeStart() {
       if (indexSecond < secondPart.length) {
         setSecondPartToShow(secondPart.slice(0, indexSecond + 1));
         indexSecond++;
+      } else if (indexSecond === secondPart.length) {
+        setTimeout(() => {
+          setIsScrollDownVisible(true);
+        }, 1500); 
+       
       }
     };
 
@@ -105,6 +112,9 @@ function HomeStart() {
           </p>
         </div>
       </div>
+      {isScrollDownVisible && (
+          <img className="Sroll-DOwn-Logo" src={ScrollDownLogo} alt="" />
+        )}
     </div>
   );
 }
