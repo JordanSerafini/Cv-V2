@@ -32,10 +32,26 @@ body {
 .Responsive {
   display: none;
 }
-/*                
-Mes contributions sur GitHub témoignent de mon engagement dans la communauté du code open source. Chaque repository est une opportunité d'apprendre, de partager et de collaborer.
-*/
+
 /* ---------------------------------- Page: HOME-START ---------------------------------- */
+
+.Cv-Photo {
+  height: 22rem !important;
+  width: 18rem !important;
+  
+  margin-left: 65rem !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  border: solid rgba(0, 0, 0, 0.411) 1px;
+  box-shadow: 10px 10px 20px 0 rgba(0, 0, 0, 0.5);
+  
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
 
 .Home-Start {
   position: relative;
@@ -1269,7 +1285,7 @@ width: 50px;
 /* ------------------------------ COMPETENCE/SKILL ---------------------------------- */
 
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1400px) {
 
 
   .Home-Start {

@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
 import Background from "../assets/background.jpeg";
+import CvPhoto from "../assets/cv-pics.jpg";
 
 function HomeStart() {
-  const firstPart = "JE SUIS JORDAN SERAFINI,";
+  const firstPart = `JE SUIS JORDAN SERAFINI, 
+  `;
   const secondPart = "DÉVELOPPEUR WEB";
   const [firstPartToShow, setFirstPartToShow] = useState("");
   const [secondPartToShow, setSecondPartToShow] = useState("");
@@ -70,9 +72,9 @@ function HomeStart() {
         </div>
       </section>
       <img className="Home-Pic" src={Background} alt="Jordan Serafini" />
-      <div className="Presentation-Container">
-        <h3 className="Bonjour">BIENVENUE ,</h3>
-        <div className="Presentation-Text-Container">
+      <div className="Home-Container">
+        <div className="Presentation-Container">
+          <h3 className="Bonjour">BIENVENUE ,</h3>
           <div className="Presentation-Text">
             <span className="Text-to-Show">{firstPartToShow}</span>
             {isFirstPartTyping && (
@@ -83,6 +85,9 @@ function HomeStart() {
               </span>
             )}
           </div>
+          {firstPartToShow === firstPart && (
+            <img src={CvPhoto} alt="CV" className="Cv-Photo" />
+          )}
           {secondPartToShow && (
             <div className="Presentation-Text">
               <span className="Text-to-Show">{secondPartToShow}</span>
@@ -95,7 +100,9 @@ function HomeStart() {
               )}
             </div>
           )}
-        <p className="Presentation-detail">Fullstack Front-end et Back-end.</p>
+          <p className="Presentation-detail">
+            Front-end et Back-end.
+          </p>
         </div>
       </div>
     </div>
