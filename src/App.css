@@ -1337,10 +1337,18 @@ width: 50px;
   }      
   
   .Responsive {
-    display: block;
-    text-align: center;
-    padding-top: 25%;
-    font-size: 2rem;
+    width: 100%; /* Largeur du conteneur */
+    height: 100vh; /* Hauteur du conteneur (100vh pour toute la hauteur de la fenêtre) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Cache les débordements de l'image */
+    background-color: #cf1e1f;
   }
-
+    
+  .Responsive img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Ajuste l'image pour qu'elle soit entièrement visible */
+  }
 }

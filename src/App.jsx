@@ -6,6 +6,7 @@ import Competences from "./Components/compétences.jsx";
 import Skill from "./Components/Skill.jsx";
 import Portfoglio from "./Components/Portfoglio.jsx";
 import MobileNavBar from "./Components/MobileNavBar.jsx";
+import Responsive from "./Components/Responsive.jsx";
 
 import upLogo from "./assets/upLogo.png";
 import EmailForm from "./Components/Email.jsx";
@@ -155,7 +156,9 @@ function App() {
           toggleNavbar={toggleNavbar}
         />
       )}{" "}
-      <p className="Responsive"> Responsive In progress</p>
+      <div>
+        <Responsive />
+      </div>
 
     </div>
   );
